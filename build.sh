@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! test $(id -u)  == "1000"
+if ! test $(id -u)  == "1001"
 then echo "Please run this script as 'app' user" ; exit 1
 fi
 if ! test -e devenv/_password 

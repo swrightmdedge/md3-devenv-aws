@@ -15,8 +15,8 @@ then if  file -sL /dev/sdb | grep "/dev/sdb: data"
      echo "/dev/sdb /app ext4 defaults 0 0" >>/etc/fstab
      mount -a
 fi
-groupadd -g 1000 app
-useradd -g 1000 -u 1000 -d /app app
+groupadd -g 1001 app
+useradd -g 1001 -u 1001 -d /app app
 cp /etc/skel/.* /app
 echo "app ALL=(ALL)	NOPASSWD: ALL" >>/etc/sudoers
 echo "app:${PASSWD}" | chpasswd
